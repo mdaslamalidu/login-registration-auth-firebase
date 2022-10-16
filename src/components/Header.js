@@ -5,7 +5,7 @@ import { authContext } from '../contexts/UserContext';
 const Header = () => {
 
     const userName = useContext(authContext);
-    const user = userName.user.dispalyName;
+    const user = userName.user.displayName;
 
     return (
             <div className="navbar bg-neutral text-neutral-content">
@@ -13,7 +13,7 @@ const Header = () => {
             <Link className="btn btn-ghost normal-case text-sm" to="/">Home</Link>
                 <Link className="btn btn-ghost normal-case text-sm" to="/login">Log in</Link>
                 <Link className="btn btn-ghost normal-case text-sm" to="/register">Register</Link>
-                {user && <p>Welcome {user}</p>}
+                {user && <p>Welcome, {user}</p>}
             </div>
     );
 };
